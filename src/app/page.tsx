@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import avatar from 'app/avatar.jpg';
-import ViewCounter from 'app/blog/view-counter';
+import avatar from 'public/app/avatar.jpg';
+import ViewCounter from 'src/app/blog/view-counter';
 import { Suspense } from 'react';
 import Link from 'next/link';
 import { getViewsCount } from './db/queries';

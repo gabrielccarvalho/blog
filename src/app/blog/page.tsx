@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Suspense } from 'react';
 import ViewCounter from './view-counter';
-import { getViewsCount } from 'app/db/queries';
-import { getBlogPosts } from 'app/db/blog';
+import { getViewsCount } from 'src/app/db/queries';
+import { getBlogPosts } from 'src/app/db/blog';
 import Image from 'next/image';
 
 export const metadata = {

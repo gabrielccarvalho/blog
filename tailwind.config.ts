@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss';
 import typography from '@tailwindcss/typography';
 
 export default {
-  content: ['./app/**/*.{ts,tsx}', './content/**/*.mdx'],
+  content: ['./src/app/**/*.{ts,tsx}', './src/content/**/*.mdx'],
   theme: {
     extend: {
       fontFamily: {
