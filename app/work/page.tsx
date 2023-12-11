@@ -1,22 +1,21 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Work',
   description: 'A summary of my work and contributions.',
 };
 
-async function Stars() {
-  let res = await fetch('https://api.github.com/repos/vercel/next.js');
-  let json = await res.json();
-  let count = Math.round(json.stargazers_count / 1000);
-  return `${count}k stars`;
-}
+// async function Stars() {
+//   let res = await fetch('https://api.github.com/repos/vercel/next.js');
+//   let json = await res.json();
+//   let count = Math.round(json.stargazers_count / 1000);
+//   return `${count}k stars`;
+// }
 
 export default function WorkPage() {
   return (
     <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">my work</h1>
+      <h1 className="font-medium text-2xl mb-8 tracking-tighter">My Work</h1>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           On a mission to build amazing products, and
@@ -29,7 +28,7 @@ export default function WorkPage() {
           React | React Native Developer, Nov 2021 — Jul 2023
         </p>
         <p>
-          I joined <a href="https://www.boavistaservicos.com.br/">Boa Vista</a> to join
+          I entered <a href="https://www.boavistaservicos.com.br/">Boa Vista</a> to join
           forces and improve {' '} <a href="https://painel.consumidorpositivo.com.br/">Consumidor Positivo</a>.
           Here, besides working on fixing bugs and improving the product, I also had the opportunity to
           improve the development experience, by refining code linting, formating and enhancing the documentation.
