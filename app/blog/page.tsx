@@ -13,8 +13,8 @@ export const metadata = {
 function ArrowIcon() {
   return (
     <svg
-      width="16"
-      height="16"
+      width="18"
+      height="18"
       viewBox="0 0 12 12"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -69,10 +69,15 @@ export default function BlogPage() {
                     className="rounded"
                   />
                 </Suspense>
-                <div className='flex flex-col'>
-                  <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                    {post.metadata.title}
-                  </p>
+                <div className='flex flex-col justify-between'>
+                  <div>
+                    <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+                      {post.metadata.title}
+                    </p>
+                    <p className="text-neutral-700 dark:text-neutral-500 tracking-tight">
+                      {post.metadata.summary}
+                    </p>
+                  </div>
                   <Suspense fallback={<p className="h-6" />}>
                     <Views slug={post.slug} />
                   </Suspense>
