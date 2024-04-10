@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Footer } from '@/components/footer'
 import { Nav } from '@/components/nav'
 import { NavMobile } from '@/components/nav-mobile'
+import { Toaster } from '@/components/ui/sonner'
 import { cn } from '@/lib/utils'
 import { inter, satoshi } from '@/styles/fonts'
 import '@/styles/global.css'
@@ -26,6 +27,7 @@ export default function RootLayout({
 					{children}
 					<Footer />
 				</main>
+				<Toaster />
 			</body>
 		</html>
 	)

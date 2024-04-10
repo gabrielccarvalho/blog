@@ -9,7 +9,7 @@ export default function ProjectsPage() {
 			<p className='text-gray-500 leading-loose'>
 				I'm obsessed with side projects and recently started{' '}
 				<span className='text-white'>building in public</span>. Here you can
-				navigate through my projects. SOme projects are still active, others
+				navigate through my projects. Some projects are still active, others
 				have been discontinued.
 			</p>
 		</MaxWidthWrapper>

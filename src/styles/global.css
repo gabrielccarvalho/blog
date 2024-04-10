@@ -34,6 +34,11 @@
 
     --radius: 0.5rem;
   }
+
+  .saturated-blur {
+    backdrop-filter: saturate(300%) blur(25px);
+    -webkit-backdrop-filter: saturate(300%) blur(25px);
+  }
 }
 
 @layer base {
