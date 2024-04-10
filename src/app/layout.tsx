@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 		siteName: 'Gabriel Campos',
 		images: [
 			{
-				url: 'http://localhost:3000/api/og?title=Gabriel-Campos', // Dynamic og route
+				url: 'http://gabrielcampos.com.br/api/og?title=Gabriel-Campos', // Dynamic og route
 				width: 800,
 				height: 600,
 			},
 			{
-				url: 'http://localhost:3000/api/og?title=Gabriel-Campos', // Dynamic og route
+				url: 'http://gabrielcampos.com.br/api/og?title=Gabriel-Campos', // Dynamic og route
 				width: 1800,
 				height: 1600,
 				alt: 'Gabriel Campos',
