@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
 		const { name, email, message }: BodyType = await req.json()
 
 		await resend.emails.send({
-			from: 'gabrielcampos.com.br <website@gabrielcampos.com.br>',
+			from: 'Gabriel <contact@gabrielcampos.com.br>',
 			to: 'gabrielccarvalhopro@gmail.com',
 			subject: `${name} - via gabrielcampos.com.br`,
 			html: `

@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button'
 import { career } from '@/utils/career'
 import { LinkedInLogoIcon } from '@radix-ui/react-icons'
 import { DownloadIcon } from 'lucide-react'
-import Link from 'next/link'
 
 export default function WorkPage() {
 	return (
