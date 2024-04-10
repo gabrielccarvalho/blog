@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 import z from 'zod'
 
 const formSchema = z.object({
@@ -21,7 +22,20 @@ export function MailForm() {
 
 	const handleSubmit = form.handleSubmit(
 		async (data: z.infer<typeof formSchema>) => {
-			console.log(data)
+			await fetch('/api/email', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					name: data.name,
+					email: data.email,
+					message: data.message,
+				}),
+			})
+
+			toast.success('Email sent!')
+			form.reset()
 		},
 	)
 
