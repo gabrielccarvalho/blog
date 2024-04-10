@@ -49,7 +49,7 @@ export function DialogCommand() {
 				size='icon'
 				variant='ghost'
 				onClick={() => setOpen(!open)}
-				className='md:visible invisible'
+				className='lg:visible invisible'
 			>
 				<Command className='size-6' />
 			</Button>
