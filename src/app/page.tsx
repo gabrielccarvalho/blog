@@ -1,6 +1,9 @@
+'use client'
+
 import { MaxWidthWrapper } from '@/components/max-width-wrapper'
 import { Button } from '@/components/ui/button'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
+import { motion } from 'framer-motion'
 
 export default function Home() {
 	return (
@@ -9,11 +12,46 @@ export default function Home() {
 				Gabriel Campos
 			</h1>
 			<div className='flex flex-col gap-1'>
-				<span className='px-4'>Software Engineer</span>
-				<span className='text-gray-500 px-4'>
+				<motion.span
+					animate={{
+						opacity: 1,
+						x: 16,
+					}}
+					transition={{
+						ease: 'linear',
+						duration: 1,
+						x: { duration: 0.8 },
+					}}
+					className='opacity-0'
+				>
+					Software Engineer
+				</motion.span>
+				<motion.span
+					animate={{
+						opacity: 1,
+						x: 16,
+					}}
+					transition={{
+						ease: 'linear',
+						duration: 1,
+						delay: 0.5,
+						x: { duration: 0.8 },
+					}}
+					className='text-gray-500 opacity-0'
+				>
 					Passionate about javascript and open-source.
-				</span>
-				<div className='mt-4'>
+				</motion.span>
+				<motion.div
+					animate={{
+						opacity: 1,
+					}}
+					transition={{
+						ease: 'linear',
+						duration: 1,
+						delay: 1.5,
+					}}
+					className='mt-4 opacity-0'
+				>
 					<Button variant='ghost' className='hover:bg-white/10'>
 						<span>
 							Press{' '}
@@ -23,7 +61,7 @@ export default function Home() {
 						</span>
 						<ArrowRightIcon className='size-4 ml-2' />
 					</Button>
-				</div>
+				</motion.div>
 			</div>
 		</MaxWidthWrapper>
 	)
