@@ -5,7 +5,11 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from '@/components/ui/accordion'
+import { Button } from '@/components/ui/button'
 import { career } from '@/utils/career'
+import { LinkedInLogoIcon } from '@radix-ui/react-icons'
+import { DownloadIcon } from 'lucide-react'
+import Link from 'next/link'
 
 export default function WorkPage() {
 	return (
@@ -18,6 +22,29 @@ export default function WorkPage() {
 				few different companies and projects. Here you can navigate through my
 				timeline.
 			</p>
+			<div>
+				<a
+					href='/CV-Gabriel-Carvalho.pdf'
+					target='_blank'
+					rel='noopener noreferrer'
+					download
+				>
+					<Button variant='ghost' className='self-start'>
+						<DownloadIcon className='size-5 mr-2' />
+						Download CV
+					</Button>
+				</a>
+				<a
+					href='https://www.linkedin.com/in/gabrielcamposdecarvalho/'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<Button variant='ghost' className='self-start'>
+						<LinkedInLogoIcon className='size-5 mr-2' />
+						Open Linkedin
+					</Button>
+				</a>
+			</div>
 			<div className='flex flex-col space-y-6'>
 				<h3 className='text-2xl'>Career</h3>
 				<ul className='space-y-12 leading-loose'>
