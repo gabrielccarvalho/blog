@@ -51,8 +51,8 @@ export default function ProjectsPage() {
 									{yearGroup.year}
 								</h4>
 								{yearGroup.projects.map((project, projectIndex) => (
-									<ul className='pl-8 list-disc'>
-										<li key={projectIndex} className='text-white font-light'>
+									<ul key={projectIndex} className='pl-8 list-disc'>
+										<li className='text-white font-light'>
 											<a
 												href={project.url}
 												target='_blank'
