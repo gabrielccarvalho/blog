@@ -5,6 +5,7 @@ import { useScroll } from '@/hooks/use-scroll'
 import { cn } from '@/lib/utils'
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
 import { motion, spring } from 'framer-motion'
+import { Command } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
@@ -97,7 +98,11 @@ export function Nav() {
 						<NavigationMenuPrimitive.Viewport className='data-[state=closed]:animate-scale-out-content data-[state=open]:animate-scale-in-content absolute left-0 top-full flex w-[var(--radix-navigation-menu-viewport-width)] origin-[top_center] justify-start rounded-lg border border-gray-200 bg-white shadow-lg' />
 					</NavigationMenuPrimitive.Root>
 				</div>
-				<DialogCommand />
+				<DialogCommand>
+					<Button size='icon' variant='ghost' className='lg:visible invisible'>
+						<Command className='size-6' />
+					</Button>
+				</DialogCommand>
 			</div>
 		</div>
 	)

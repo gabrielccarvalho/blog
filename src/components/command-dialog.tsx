@@ -15,7 +15,6 @@ import {
 	BriefcaseBusinessIcon,
 	Code2,
 	Code2Icon,
-	Command,
 	HomeIcon,
 	LinkIcon,
 	MailIcon,
@@ -24,9 +23,8 @@ import {
 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
-import { Button } from './ui/button'
 
-export function DialogCommand() {
+export function DialogCommand({ children }: React.PropsWithChildren) {
 	const [open, setOpen] = React.useState(false)
 	const { push } = useRouter()
 
@@ -44,14 +42,7 @@ export function DialogCommand() {
 
 	return (
 		<>
-			<Button
-				size='icon'
-				variant='ghost'
-				onClick={() => setOpen(!open)}
-				className='lg:visible invisible'
-			>
-				<Command className='size-6' />
-			</Button>
+			<div onClick={() => setOpen(!open)}>{children}</div>
 			<CommandDialog open={open} onOpenChange={setOpen}>
 				<CommandInput placeholder='Type a command or search...' />
 				<CommandList>

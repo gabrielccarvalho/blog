@@ -1,7 +1,15 @@
+'use client'
+
 import { MaxWidthWrapper } from '@/components/max-width-wrapper'
+import { motion } from 'framer-motion'
+import { ArrowUpRightIcon } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
 
 export default function AboutPage() {
+	const [hovered, setHovered] = useState('')
+
 	return (
 		<MaxWidthWrapper className='flex flex-col md:min-h-[calc(100vh-9rem)] p-6 py-16 gap-8'>
 			<h1 className='text-4xl font-extrabold font-display bg-clip-text text-transparent bg-gradient-to-l from-purple-400 via-pink-400 to-fuchsia-400'>
@@ -56,6 +64,60 @@ export default function AboutPage() {
 						opportunities and projects to participate.
 					</p>
 				</blockquote>
+			</div>
+			<div className='flex flex-col gap-8'>
+				<h3 className='text-2xl'>Keep exploring!</h3>
+				<div
+					className='grid grid-cols-2 max-w-md gap-4'
+					onMouseLeave={() => setHovered('')}
+				>
+					<Link href='/work'>
+						<div
+							className='relative flex items-center justify-center h-20 text-lg cursor-pointer group'
+							onMouseEnter={() => setHovered('work')}
+						>
+							My Work
+							<ArrowUpRightIcon
+								strokeWidth={1.5}
+								className='size-6 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200'
+							/>
+							{hovered === 'work' && (
+								<motion.div
+									className='absolute -top-2 -left-2 py-[3rem] px-[7.25rem] bg-hover/50 rounded-md -z-10'
+									layoutId='underline'
+									transition={{
+										type: 'sprint',
+										bounce: 0.25,
+										duration: 0.25,
+									}}
+								/>
+							)}
+						</div>
+					</Link>
+					<Link href='/projects'>
+						<div
+							className='relative flex items-center justify-center h-20 text-lg cursor-pointer group'
+							onMouseEnter={() => setHovered('projects')}
+						>
+							My Projects
+							<ArrowUpRightIcon
+								strokeWidth={1.5}
+								className='size-6 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200'
+							/>
+							{hovered === 'projects' && (
+								<motion.div
+									className='absolute -top-2 -left-2 py-[3rem] px-[7.25rem] bg-hover/50 rounded-md -z-10'
+									layoutId='underline'
+									transition={{
+										type: 'sprint',
+										bounce: 0.25,
+										duration: 0.25,
+									}}
+								/>
+							)}
+						</div>
+					</Link>
+				</div>
 			</div>
 		</MaxWidthWrapper>
 	)

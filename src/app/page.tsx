@@ -1,5 +1,6 @@
 'use client'
 
+import { DialogCommand } from '@/components/command-dialog'
 import { MaxWidthWrapper } from '@/components/max-width-wrapper'
 import { Button } from '@/components/ui/button'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
@@ -52,15 +53,17 @@ export default function Home() {
 					}}
 					className='mt-4 opacity-0'
 				>
-					<Button variant='ghost' className='hover:bg-white/10'>
-						<span>
-							Press{' '}
-							<kbd className='bg-gray-600 px-1.5 py-0.5 rounded-sm'>⌘</kbd>{' '}
-							<kbd className='bg-gray-600 px-1.5 py-0.5 rounded-sm'>k</kbd> to
-							start
-						</span>
-						<ArrowRightIcon className='size-4 ml-2' />
-					</Button>
+					<DialogCommand>
+						<Button variant='ghost' className='hover:bg-white/10'>
+							<span>
+								Press{' '}
+								<kbd className='bg-gray-600 px-1.5 py-0.5 rounded-sm'>⌘</kbd>{' '}
+								<kbd className='bg-gray-600 px-1.5 py-0.5 rounded-sm'>k</kbd> to
+								start
+							</span>
+							<ArrowRightIcon className='size-4 ml-2' />
+						</Button>
+					</DialogCommand>
 				</motion.div>
 			</div>
 		</MaxWidthWrapper>
