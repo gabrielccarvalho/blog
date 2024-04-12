@@ -31,16 +31,8 @@ export default function AboutPage() {
 						React.
 					</p>
 					<p className='text-gray-500'>
-						I've created a few micro-saas companies, currently launching{' '}
-						<a
-							href='https://cardfy.vercel.app/'
-							target='_blank'
-							rel='noreferrer'
-							className='text-white'
-						>
-							Cardfy
-						</a>
-						. I'm originally from Brazil, living in{' '}
+						I've created a few micro-saas companies, always working on a new
+						awesome project. I'm originally from Brazil, living in{' '}
 						<span className='text-white'>Natal, Rio Grande do Norte</span>.
 					</p>
 					<p className='text-gray-500'>
