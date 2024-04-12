@@ -28,15 +28,15 @@ const featuredProjects = [
 		description: 'A gamified way to study for exams',
 		icon: <GraduationCapIcon className='size-5' />,
 		link: '/study-app',
-		highlight: '6 users',
+		highlight: '+2K studies',
 	},
 	{
 		title: 'Blog',
 		slug: 'blog',
 		description: 'My personal blog and digital garden',
 		icon: <Code2Icon className='size-5' />,
-		link: '/articles',
-		highlight: '1 article',
+		link: '/blog',
+		highlight: '1 post',
 	},
 ]
 
@@ -63,7 +63,7 @@ export function FeaturedList() {
 						<span className='text-sm'>{project.highlight}</span>
 						{project.slug === hovered && (
 							<motion.div
-								className='absolute top-0 -left-4 px-24 py-20 bg-white/10 rounded-md -z-10'
+								className='absolute top-0 -left-4 px-24 py-20 bg-hover/50 rounded-md -z-10'
 								layoutId='underline'
 								transition={{
 									type: 'sprint',

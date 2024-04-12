@@ -3,7 +3,7 @@ import { MailForm } from './_components/mail-form'
 
 export default function ContactPage() {
 	return (
-		<MaxWidthWrapper className='flex flex-col md:min-h-[calc(100vh-8rem)] min-h-[calc(100vh-11rem)] p-6 py-16 gap-8'>
+		<MaxWidthWrapper className='flex flex-col md:min-h-[calc(100vh-9rem)] min-h-[calc(100vh-11rem)] p-6 py-16 gap-8'>
 			<h1 className='text-4xl font-extrabold font-display bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-sky-300 to-indigo-500'>
 				Email me. Like in the old days.
 			</h1>

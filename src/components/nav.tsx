@@ -25,8 +25,8 @@ export const navItems = [
 		slug: 'projects',
 	},
 	{
-		name: 'Articles',
-		slug: 'articles',
+		name: 'Blog',
+		slug: 'blog',
 	},
 	{
 		name: 'Contact',
@@ -41,8 +41,8 @@ export function Nav() {
 
 	return (
 		<div
-			className={cn('sticky inset-x-0 top-2 z-30 w-full transition-all', {
-				'backdrop-blur-lg': scrolled,
+			className={cn('sticky inset-x-0 top-0 py-2 z-30 w-full transition-all', {
+				'backdrop-blur-lg bg-black/75': scrolled,
 			})}
 			onMouseLeave={() => setHovered('')}
 		>
@@ -65,17 +65,22 @@ export function Nav() {
 										key={slug}
 										href={`/${slug}`}
 										onMouseEnter={() => setHovered(slug)}
-										aria-selected={pathname === `/${slug}`}
+										aria-selected={
+											pathname === `/${slug}` || pathname.startsWith(`/${slug}`)
+										}
 										className='flex flex-col items-center rounded-md px-3 py-2 text-xs uppercase font-medium text-gray-500 transition-colors duration-300 ease-out hover:text-white aria-selected:text-white'
 									>
 										{name}
 										<div
-											aria-selected={pathname === `/${slug}`}
+											aria-selected={
+												pathname === `/${slug}` ||
+												pathname.startsWith(`/${slug}`)
+											}
 											className='invisible w-1/2 border-b border-white -z-10 mt-1.5 aria-selected:visible'
 										/>
 										{slug === hovered && (
 											<motion.div
-												className='absolute top-3 px-12 py-5 bg-white/10 rounded-md -z-10'
+												className='absolute top-3 px-12 py-5 bg-hover/50 rounded-md -z-10'
 												layoutId='underline'
 												transition={{
 													type: 'sprint',

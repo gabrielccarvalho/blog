@@ -12,7 +12,7 @@ import { DownloadIcon } from 'lucide-react'
 
 export default function WorkPage() {
 	return (
-		<MaxWidthWrapper className='flex flex-col md:min-h-[calc(100vh-8rem)] min-h-[calc(100vh-11rem)] p-6 py-16 gap-8'>
+		<MaxWidthWrapper className='flex flex-col md:min-h-[calc(100vh-9rem)] min-h-[calc(100vh-11rem)] p-6 py-16 gap-8'>
 			<h1 className='text-4xl font-extrabold font-display bg-clip-text text-transparent bg-gradient-to-l from-emerald-400 via-teal-400 to-green-400'>
 				Solve. Build. Grow
 			</h1>

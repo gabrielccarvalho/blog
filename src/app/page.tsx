@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 export default function Home() {
 	return (
-		<MaxWidthWrapper className='flex flex-col md:min-h-[calc(100vh-8rem)] h-[calc(100vh-11rem)] justify-center p-6 py-16 gap-8'>
+		<MaxWidthWrapper className='flex flex-col md:min-h-[calc(100vh-9rem)] h-[calc(100vh-11rem)] justify-center p-6 py-16 gap-8'>
 			<h1 className='text-4xl font-extrabold font-display px-4'>
 				Gabriel Campos
 			</h1>

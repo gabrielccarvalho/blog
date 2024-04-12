@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function AboutPage() {
 	return (
-		<MaxWidthWrapper className='flex flex-col md:min-h-[calc(100vh-8rem)] p-6 py-16 gap-8'>
+		<MaxWidthWrapper className='flex flex-col md:min-h-[calc(100vh-9rem)] p-6 py-16 gap-8'>
 			<h1 className='text-4xl font-extrabold font-display bg-clip-text text-transparent bg-gradient-to-l from-purple-400 via-pink-400 to-fuchsia-400'>
 				Develop. Share. Repeat
 			</h1>

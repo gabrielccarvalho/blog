@@ -22,7 +22,6 @@ import {
 	NewspaperIcon,
 	UserCircleIcon,
 } from 'lucide-react'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
 import { Button } from './ui/button'
@@ -132,12 +131,12 @@ export function DialogCommand() {
 						</CommandItem>
 						<CommandItem
 							onSelect={() => {
-								push('/articles')
+								push('/blog')
 								setOpen(false)
 							}}
 						>
 							<NewspaperIcon className='mr-2 size-4' />
-							<span>Articles</span>
+							<span>Blog</span>
 						</CommandItem>
 					</CommandGroup>
 				</CommandList>
