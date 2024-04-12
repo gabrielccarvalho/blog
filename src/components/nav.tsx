@@ -43,7 +43,7 @@ export function Nav() {
 	return (
 		<div
 			className={cn('sticky inset-x-0 top-0 py-2 z-30 w-full transition-all', {
-				'backdrop-blur-lg bg-black/75': scrolled,
+				'backdrop-blur-lg': scrolled,
 			})}
 			onMouseLeave={() => setHovered('')}
 		>
