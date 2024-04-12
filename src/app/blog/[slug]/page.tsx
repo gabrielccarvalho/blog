@@ -20,13 +20,11 @@ export async function generateMetadata(
 		description: 'This post does not exist.',
 	}
 
-	const previousImages = (await parent).openGraph?.images || []
-
 	return {
 		title: `Blog | ${post.title}`,
 		description: post.description,
 		openGraph: {
-			images: [`/posts/${slug}.png`, ...previousImages],
+			images: [`/posts/${slug}.png`],
 		},
 	}
 }
