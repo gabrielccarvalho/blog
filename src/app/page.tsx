@@ -58,7 +58,7 @@ export default function Home() {
 							<span>
 								Press{' '}
 								<kbd className='bg-gray-600 px-1.5 py-0.5 rounded-sm'>⌘</kbd>{' '}
-								<kbd className='bg-gray-600 px-1.5 py-0.5 rounded-sm'>k</kbd> to
+								<kbd className='bg-gray-600 px-1.5 py-0.5 rounded-sm'>K</kbd> to
 								start
 							</span>
 							<ArrowRightIcon className='size-4 ml-2' />

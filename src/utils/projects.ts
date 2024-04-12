@@ -16,11 +16,6 @@ export const projectHistory = [
 	},
 	{
 		year: 2023,
-		name: 'Finances API',
-		url: 'https://github.com/gabrielccarvalho/finances-api',
-	},
-	{
-		year: 2023,
 		name: 'Finances',
 		url: 'https://github.com/gabrielccarvalho/finances',
 	},
@@ -31,13 +26,8 @@ export const projectHistory = [
 	},
 	{
 		year: 2023,
-		name: 'Upload AI API',
-		url: 'https://github.com/gabrielccarvalho/upload.ai-server',
-	},
-	{
-		year: 2023,
-		name: 'Rocketshoes',
-		url: 'https://github.com/gabrielccarvalho/rocketshoes',
+		name: 'Upload AI',
+		url: 'https://github.com/gabrielccarvalho/upload.ai',
 	},
 	{
 		year: 2023,
@@ -45,19 +35,9 @@ export const projectHistory = [
 		url: 'https://github.com/gabrielccarvalho/Planner',
 	},
 	{
-		year: 2023,
-		name: 'Ignite Teams',
-		url: 'https://github.com/gabrielccarvalho/ignite-teams',
-	},
-	{
-		year: 2023,
+		year: 2022,
 		name: 'One Finance',
 		url: 'https://github.com/gabrielccarvalho/OneFinance',
-	},
-	{
-		year: 2023,
-		name: 'Upload AI',
-		url: 'https://github.com/gabrielccarvalho/upload.ai',
 	},
 	{
 		year: 2022,
@@ -101,11 +81,6 @@ export const projectHistory = [
 	},
 	{
 		year: 2020,
-		name: 'E-Coleta API',
-		url: 'https://github.com/gabrielccarvalho/ecoleta-api',
-	},
-	{
-		year: 2020,
 		name: 'Calendar',
 		url: 'https://github.com/gabrielccarvalho/Calendar',
 	},
@@ -120,8 +95,13 @@ export const projectHistory = [
 		url: 'https://github.com/gabrielccarvalho/Meetup',
 	},
 	{
-		year: 2020,
-		name: 'MeetApp API',
-		url: 'https://github.com/gabrielccarvalho/Meetapp-backend',
+		year: 2019,
+		name: 'Ignite Teams',
+		url: 'https://github.com/gabrielccarvalho/ignite-teams',
+	},
+	{
+		year: 2019,
+		name: 'Rocketshoes',
+		url: 'https://github.com/gabrielccarvalho/rocketshoes',
 	},
 ]
