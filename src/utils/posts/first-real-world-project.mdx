@@ -1,0 +1,75 @@
+## Quick background story
+
+Me and some close friends were trying to get active in the gym, but we lacked
+motivation to do it, so one of them suggested this one app that you can log
+every time you went to the gym and rank us based on that.
+
+It was a success, we were all hooked on it, I started to go to the gym more than
+I've ever been. So it got me thinking what was different... The <span style={{ color: '#FFF' }}>dopamine</span>.
+
+The same feeling that you get when you rank up on a game, we were getting by working out.
+
+Soon my friends and I had the idea to add a challenge on this app, but this time to track our study time. So we can get
+the same feeling, but studying. Altough it was a great idea, the whole app was
+built for fitness pourposes... So it came the idea for <a href='https://study.app.br' target='_blank' rel='noopener noreferrer' style={{ color: '#FFF' }}>Study App</a>.
+
+## Building the MVP
+
+With the idea in mind and fully validated by my friends, I jumped over VS Code and started developing what would be the
+first version of Study App.
+
+### Tech choices
+
+All of the choices were made in a way that I'd be able to deliver the MVP as fast as possible, with little to no waste
+of time, so I went with the stack I'm most comfortable with.
+
+To avoid speding too much time making a design system, I used the awesome lib called
+<a href='https://ui.shadcn.com/' target='_blank' rel='noopener noreferrer' style={{ color: '#FFF' }}>shadcn/ui</a>
+to build the components.
+
+For authentication and user management, I went with
+<a href='https://clerk.com/' target='_blank' rel='noopener noreferrer'>Clerk</a>
+to handle the authentication without having to worry about it.
+
+As my database, I went with Firebase
+<a href='https://firebase.google.com/docs/firestore' target='_blank' rel='noopener noreferrer'>Firestore</a>
+for a while, but soon changed to a postgres instance on Vercel, since I was using
+Next and deploying on Vercel, it was a no brainer.
+
+And lastly, for the images the users would upload, I simply used a S3 bucket from
+<a href='https://aws.amazon.com/s3/' target='_blank' rel='noopener noreferrer'>AWS</a>.
+
+### The design
+
+That was a tough part. I was never very good designing great UI/UX interfaces by myself,
+and when I did, it usually took me a lot of time to get it right.
+
+So I had the idea to use the same design idea the original app were using and just
+adding the features we needed, changing the stuff we didn't need and so on.
+
+It didn't sound like a bad idea, since the only users would be me and my friends
+and I wanted to deliver the first version as fast as possible. In the end,
+<span style={{ color: '#FFF' }}>done is always better than perfet</span>.
+
+## The learning curve
+
+At some point in time, all of us developers think we know how to do everything, that is 'just a google search' and its done...
+Well, if you didn't, I did though like that, and soon enough I was proven very wrong.
+
+So many things that were handled by my coworkers and I didn't had to worry about before, I was having to handle by myself,
+without a team to back me up. It seems like a small thing, building an app for some friends, but in reality it was a huge
+grow and an amazing experience in spite of it all.
+
+Of course, the app crashed a lot of times on production, the design was not the best, the code wasn't nearly perfect, but
+it was on and serving its purpose, and that was the best feeling I've had developing something.
+
+## My takeaways
+
+Some of the key things I've learned during this experience was:
+
+- Done is always better than perfect.
+- You don't know everythin.
+- The best motivation is to see other people using your product.
+- It's almost certain that the couple first projects you launch will fail, and that's okay.
+
+In summary, quoting Nike: <span style={{ color: '#FFF' }}>Just do it</span>.

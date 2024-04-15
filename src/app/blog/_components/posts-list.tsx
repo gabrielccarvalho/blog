@@ -17,9 +17,8 @@ export function PostsList() {
 			{POSTS.sort(
 				(a, b) => moment(b.date).valueOf() - moment(a.date).valueOf(),
 			).map((post) => (
-				<Link href={`/blog/${post.slug}`}>
+				<Link key={post.slug} href={`/blog/${post.slug}`}>
 					<div
-						key={post.id}
 						onMouseEnter={() => setHovered(post.slug)}
 						className='relative flex justify-between items-start gap-2 cursor-pointer py-8 border-b border-border'
 					>

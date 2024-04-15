@@ -1,15 +1,24 @@
-import { getReadTime } from '../get-read-time'
+import FirstProject from './first-real-world-project.mdx'
 import HelloWorld from './hello-world.mdx'
 
 export const POSTS = [
 	{
-		id: 'e93278f5-4cd3-4576-8158-1a9fe6bd4941',
 		title: 'Hello World!',
 		description: 'The first post of this blog, and plans for the future',
 		date: new Date('2024-04-12T06:39:55.343Z'),
 		slug: 'hello-world',
 		image: '/posts/hello-world.png',
 		content: <HelloWorld />,
-		read_time: getReadTime(HelloWorld),
+		read_time: '3 min read',
+	},
+	{
+		title: 'Launching my first real-world project',
+		description:
+			'My experience building and launching my first real-world project, dealing with users and bugs in production.',
+		date: new Date('2024-04-15T19:47:18.545Z'),
+		slug: 'first-real-world-project',
+		image: '/posts/first-real-world-project.png',
+		content: <FirstProject />,
+		read_time: '8 min read',
 	},
 ]

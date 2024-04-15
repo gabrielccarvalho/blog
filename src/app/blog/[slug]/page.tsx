@@ -29,7 +29,7 @@ export async function generateMetadata(
 	}
 }
 
-export default function PostPage({ params }: Props) {
+export default async function PostPage({ params }: Props) {
 	const { slug } = params
 
 	const post = POSTS.find((post) => post.slug === slug)
