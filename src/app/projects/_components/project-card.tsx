@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { MoreVertical } from 'lucide-react'
+import { ArrowUpRight, MoreVertical } from 'lucide-react'
 import Image from 'next/image'
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
 
 export function ProjectCard({ project }: Props) {
 	return (
-		<a href={project.url} target='_blank' rel='noreferrer'>
+		<a href={project.url} target='_blank' rel='noreferrer' className='group'>
 			<div className='flex flex-row justify-between text-white font-light p-4 border border-gray-400/20 rounded-md'>
 				<div className='flex flex-col gap-4'>
 					<div>
@@ -42,8 +42,11 @@ export function ProjectCard({ project }: Props) {
 						))}
 					</div>
 				</div>
-				<Button variant='ghost' size='icon'>
-					<MoreVertical className='size-4 text-gray-400' />
+				<Button variant='ghost' size='icon' className='hover:bg-transparent'>
+					<ArrowUpRight
+						strokeWidth={1.5}
+						className='size-6 text-gray-400 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-300 ease-in-out'
+					/>
 				</Button>
 			</div>
 		</a>
