@@ -1,6 +1,7 @@
 import { MaxWidthWrapper } from '@/components/max-width-wrapper'
 import { projectHistory } from '@/utils/projects'
 import { FeaturedList } from './_components/featured-list'
+import { ProjectCard } from './_components/project-card'
 
 export default function ProjectsPage() {
 	return (
@@ -29,7 +30,13 @@ export default function ProjectsPage() {
 							(
 								acc: {
 									year: number
-									projects: { year: number; name: string; url: string }[]
+									projects: {
+										year: number
+										name: string
+										description: string
+										tech: string[]
+										url: string
+									}[]
 								}[],
 								project,
 							) => {
@@ -51,18 +58,7 @@ export default function ProjectsPage() {
 									{yearGroup.year}
 								</h4>
 								{yearGroup.projects.map((project, projectIndex) => (
-									<ul key={projectIndex} className='pl-8 list-disc'>
-										<li className='text-white font-light'>
-											<a
-												href={project.url}
-												target='_blank'
-												rel='noreferrer'
-												className='underline underline-offset-4'
-											>
-												{project.name}
-											</a>
-										</li>
-									</ul>
+									<ProjectCard key={projectIndex} project={project} />
 								))}
 							</div>
 						))}

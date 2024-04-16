@@ -1,44 +1,51 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { MoreVertical } from 'lucide-react'
+import Image from 'next/image'
 
 type Props = {
 	project: {
-		title: string
-		slug: string
+		name: string
 		description: string
-		icon: React.ReactNode
-		link: string
-		highlight: string
+		year: number
+		url: string
+		tech: string[]
 	}
-	hovered: string
-	setHovered: (slug: string) => void
 }
 
-export function FeaturedProjectCard({ project, hovered, setHovered }: Props) {
+export function ProjectCard({ project }: Props) {
 	return (
-		<Link href={project.link}>
-			<div
-				className='relative flex flex-col justify-between gap-2 col-span-1 py-4 px-6 hover:cursor-pointer'
-				onMouseEnter={() => setHovered(project.slug)}
-			>
-				{project.icon}
-				<h4 className='text-xl font-bold'>{project.title}</h4>
-				<p className='text-sm text-gray-500 max-w-32'>{project.description}</p>
-				<span className='text-sm'>{project.highlight}</span>
-				{project.slug === hovered && (
-					<motion.div
-						className='absolute top-0 -left-4 md:px-24 px-52 py-20 bg-hover/50 rounded-md -z-10'
-						layoutId='underline'
-						transition={{
-							type: 'sprint',
-							bounce: 0.25,
-							duration: 0.25,
-						}}
-					/>
-				)}
+		<a href={project.url} target='_blank' rel='noreferrer'>
+			<div className='flex flex-row justify-between text-white font-light p-4 border border-gray-400/20 rounded-md'>
+				<div className='flex flex-col gap-4'>
+					<div>
+						{project.name}
+						<p className='text-gray-500'>{project.description}</p>
+					</div>
+					<div className='flex gap-2 flex-wrap'>
+						{project.tech.map((tech, index) => (
+							<Badge
+								key={index}
+								variant='outline'
+								className='text-xs rounded-sm cursor-default'
+							>
+								<Image
+									src={`/tech/${tech.toLowerCase()}.svg`}
+									alt={tech}
+									width={16}
+									height={16}
+									className='mr-1'
+									draggable={false}
+								/>
+								{tech}
+							</Badge>
+						))}
+					</div>
+				</div>
+				<Button variant='ghost' size='icon'>
+					<MoreVertical className='size-4 text-gray-400' />
+				</Button>
 			</div>
-		</Link>
+		</a>
 	)
 }

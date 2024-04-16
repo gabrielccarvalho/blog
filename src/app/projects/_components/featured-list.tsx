@@ -2,7 +2,7 @@
 
 import { Code2Icon, GraduationCapIcon, SpadeIcon } from 'lucide-react'
 import { useState } from 'react'
-import { FeaturedProjectCard } from './project-card'
+import { FeaturedProjectCard } from './featured-project-card'
 
 const featuredProjects = [
 	{
